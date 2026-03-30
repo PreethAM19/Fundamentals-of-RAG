@@ -377,6 +377,8 @@ print(answer['response'])
 
 ## 📚 Learning Path
 
+For a structured seven-day walkthrough with daily guides, output templates, and a ready-made mini corpus, see [StudyPlan/README.md](./StudyPlan/README.md).
+
 ### Beginner
 1. Start with **ChromaDemo** to understand vector databases
 2. Explore **TextParser** for basic document processing

@@ -1,0 +1,7 @@
+Hybrid Search Notes
+
+BM25 and semantic retrieval solve different problems. BM25 is strong when users ask with the same keywords that appear in the document. It is especially helpful for acronyms, product names, exact phrases, and technical identifiers. Semantic retrieval is stronger when the query and the document say the same idea using different words.
+
+Hybrid search combines both signals. A common pattern is to take the top results from BM25 and the top results from vector similarity, then merge them with a ranking strategy such as reciprocal rank fusion. This can improve recall and reduce the chance that one retrieval method misses an otherwise useful chunk.
+
+Hybrid retrieval is often better than either method alone, but it adds tuning decisions. You have to decide how many results to take from each side, how to merge them, and how many final chunks to send into the answer prompt.

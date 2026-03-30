@@ -1,0 +1,7 @@
+Ingestion Notes
+
+A RAG system usually starts by turning source material into a format that a retrieval system can index. That often means extracting the useful text, preserving identifying metadata, and breaking the content into chunks. Metadata matters because it helps trace results back to the original source and can also support filtering, auditing, and citation. A chunk without source information may still be searchable, but it is much harder to trust during question answering.
+
+Structured data and unstructured data are ingested differently. A CSV row often becomes a short text description plus a metadata object containing the original columns. A plain text file may already be readable, so the main decision is how to chunk it and what file-level metadata to preserve. PDF and DOCX files usually need additional extraction logic because layout, formatting, and embedded structure can affect text quality.
+
+A strong ingestion pipeline is not just about getting text out of a file. It is about creating retrieval units that stay meaningful after chunking and still point back to the original document.

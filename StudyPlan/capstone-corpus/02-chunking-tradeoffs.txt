@@ -1,0 +1,7 @@
+Chunking Tradeoffs
+
+Chunking is one of the most important design choices in RAG. If chunks are too small, retrieval may return fragments that are precise but incomplete. If chunks are too large, retrieval may bring back too much unrelated context and make the answer noisier. Overlap is often used to reduce context loss between adjacent chunks, especially when ideas span boundaries.
+
+Sentence-based chunking usually keeps ideas readable and compact. Paragraph-based chunking often works well for notes, articles, and technical writing because the author has already grouped related content. Fixed-size chunking is fast and simple, but it can cut through a sentence or section in awkward places. Section-based chunking can work very well when headings are reliable because the chunk boundaries align with the document structure.
+
+There is no single best chunking strategy. Good chunking depends on the corpus, the retrieval method, and the style of question you expect users to ask.

@@ -1,0 +1,7 @@
+Evaluation Checklist
+
+RAG quality should be judged by more than whether the final answer sounds good. A system can produce a fluent answer that is weakly grounded or not grounded at all. Good evaluation checks whether the retrieved chunks actually support the answer and whether the system cites the right evidence.
+
+When a result is poor, it helps to diagnose the failure source. The problem may begin during parsing if key text was lost or corrupted. The problem may come from chunking if the evidence was split badly. Retrieval may fail if the relevant chunk was never ranked highly enough. Prompting can also fail if the right evidence was retrieved but the answer ignored it or overgeneralized.
+
+A practical review loop is simple: inspect the question, inspect the retrieved chunks, inspect the final answer, and then decide which stage needs improvement.
